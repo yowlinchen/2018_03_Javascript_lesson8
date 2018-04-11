@@ -6,7 +6,13 @@
 <script>
     // when DOM finishes loading, call init()
     function init() {
-        alert("Loaded");
+        let btn=document.getElementById("btn");
+        // register an click function on button
+        let handler=function() {
+            alert("Hello");
+        }
+        // btn.addEventListener(EventName,click function);
+         btn.addEventListener("click",handler);
     }
 </script>
 <body onload="init();">
