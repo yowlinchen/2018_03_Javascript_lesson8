@@ -8,12 +8,22 @@
     function init() {
         let btn=document.getElementById("btn");
         // register an click function on button
-        let handler=function() {
+    //     let handler=function() {
+    //         alert("Hello");
+    //     }
+    //     // btn.addEventListener(EventName,click function);
+    //      btn.addEventListener("click",handler);
+        btn.addEventListener("click",function(){
+    
+    // let handler=function() {
+    //     alert("Hello");
+    // };
+    // btn.addEventListener("click",handler)
             alert("Hello");
-        }
-        // btn.addEventListener(EventName,click function);
-         btn.addEventListener("click",handler);
+         });
     }
+
+
 </script>
 <body onload="init();">
    <button id="btn">Click</button> 
