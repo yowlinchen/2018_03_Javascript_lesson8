@@ -7,21 +7,22 @@
     // when DOM finishes loading, call init()
     function init() {
         let btn=document.getElementById("btn");
+        let handler=function() {
+         alert("Hello");
+        };
+        btn.addEventListener("click",handler);
+        btn.addEventListener("click",function(){
+            alert("Hello 2");
+        });
+    }
+
         // register an click function on button
     //     let handler=function() {
     //         alert("Hello");
     //     }
     //     // btn.addEventListener(EventName,click function);
     //      btn.addEventListener("click",handler);
-        btn.addEventListener("click",function(){
     
-    // let handler=function() {
-    //     alert("Hello");
-    // };
-    // btn.addEventListener("click",handler)
-            alert("Hello");
-         });
-    }
 
 
 </script>
