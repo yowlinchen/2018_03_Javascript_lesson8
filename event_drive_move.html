@@ -14,7 +14,9 @@
             document.addEventListener("mousemove",move)
         }
         function move(e) {
-            document.title=e.clientX+","+e.clientY;
+            // document.title=e.clientX+","+e.clientY;
+            box.style.left=e.clientX+"px";
+            box.style.top=e.clientY+"px";
         }
         window.addEventListener("load",init); // same thing as put in the body tag like before
     </script>
