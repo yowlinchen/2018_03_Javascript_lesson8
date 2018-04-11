@@ -3,7 +3,13 @@
 <head>
     <title>Event</title>
 </head>
-<body>
-   <button onclick="alert('Hello');">Click</button> 
+<script>
+    // when DOM finishes loading, call init()
+    function init() {
+        alert("Loaded");
+    }
+</script>
+<body onload="init();">
+   <button id="btn">Click</button> 
 </body>
 </html>
