@@ -4,8 +4,17 @@
     <title>Move Box</title>
     <script>
         // When HTML DOM is redy / call init() 
+        let box;
         function init() {
-
+            box=document.getElementById("box");
+            box.addEventListener("click",pickup);
+        }
+        function pickup() { // can be put here w/o any problem.  Before it was before init()
+            // let box move with mouse
+            document.addEventListener("mousemove",move)
+        }
+        function move(e) {
+            document.title=e.clientX+","+e.clientY;
         }
         window.addEventListener("load",init); // same thing as put in the body tag like before
     </script>
