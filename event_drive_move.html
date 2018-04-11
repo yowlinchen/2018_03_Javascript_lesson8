@@ -5,10 +5,14 @@
     <script>
         // When HTML DOM is redy / call init() 
         let box;
-        function init() {
+        function init() { // right after loading
             box=document.getElementById("box");
             box.addEventListener("click",pickup);
         }
+
+        // after click, pick() is run
+        // Register mouse event
+        // IFIFIF click again, remove pickup run putdown
         function pickup() { // can be put here w/o any problem.  Before it was before init()
             // let box move with mouse
             document.addEventListener("mousemove",move);
@@ -21,6 +25,9 @@
             box.style.left=(e.clientX-20)+"px";
             box.style.top=(e.clientY-20)+"px";
         }
+
+
+        // After second click, run putdown()
         function putdown() { 
             document.removeEventListener("mousemove",move);
             box.addEventListener("click",pickup);
