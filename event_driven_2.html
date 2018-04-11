@@ -7,10 +7,22 @@
     // when DOM finishes loading, call init()
     function init() {
         let btn=document.getElementById("btn");
-        let handler=function() {
-         alert("Hello");
+        let handler=function(e) {
+            console.log(e);
+            alert(e.clientX+","+e.clientY);
+            alert("Hello");
         };
         btn.addEventListener("click",handler);
+        /*
+            1. Browser detects onclick, and trigger the event
+            2. Browser get event related information(i.e where mouse is located at) and create (event object)
+                 let eventObject=new event_object();
+            3. Browser calls event handler function, then pass in "event object" with an argument
+                handler(eventObject);
+            4. if we are interested in "eventObject"
+
+            
+        */
         btn.addEventListener("click",function(){
             alert("Hello 2");
         });
