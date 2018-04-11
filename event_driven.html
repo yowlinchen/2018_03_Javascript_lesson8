@@ -3,14 +3,22 @@
 <head>
     <title>Event</title>
 </head>
+<script>
+    function over(elem) {
+        elem.style.color="red";
+    }
+    function leave(elem) {
+        elem.style.color="black";
+    }
+</script>
 <body>
     <div
-        onmouseover="this.style.color='red';"
-        onmouseout="this.style.color='black';"
+        onmouseover="over(this);"
+        onmouseout="leave(this);"
     >Hello</div>
     <span
-        onmouseover="this.style.color='red';"
-        onmouseout="this.style.color='black';"
+        onmouseover="over(this);"
+        onmouseout="leave(this);"
     >Inline Text</span>
     <!-- <img
         onmouseover="this.src='';"
